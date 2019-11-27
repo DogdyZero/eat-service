@@ -1,0 +1,23 @@
+<div fxLayout="column" fxFlex="100">
+  <div fxLayout="row">
+    <div fxLayout="column" fxFlex="20">
+      <app-side-menu [posicao]="posicao" (posicaoChange)="verificar($event)"></app-side-menu>
+    </div>
+    <div fxLayout="column" fxFlex="80">
+      <div *ngIf="posicao==1" >
+        <div fxLayout="column" >
+            <app-novo-pedido [id]="idUsuario" (salvo)="verificar($event)"></app-novo-pedido>
+        </div>
+      </div>
+      <div *ngIf="posicao==2">
+        <app-meu-pedido [id]="idUsuario"></app-meu-pedido>
+      </div>
+      <div *ngIf="posicao==3">
+        <app-cadastro [cliente]="cliente"></app-cadastro>
+      </div>
+      <div *ngIf="posicao==100">
+        <h2>Pedido Salvo com Sucesso!</h2>
+      </div>
+    </div>
+  </div>
+</div>

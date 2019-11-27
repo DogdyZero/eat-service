@@ -1,0 +1,11 @@
+<div fxLayoutAlign="center center">
+  <div fxLayout="column" fxLayoutGap="2%" fxFlex="80">
+    <app-dados-pessoais [cliente]="cliente" (salvar)="salvarDados($event)"></app-dados-pessoais>
+    <app-endereco [cliente]="cliente" (salvar)="salvarEndereco($event)"></app-endereco>
+    <app-usuario (salvar)="salvarUsuario($event)"></app-usuario>
+    <div fxLayoutAlign="end center" fxLayoutGap="2%">
+      <button fxFlex="10" mat-raised-button color="primary" (click)="salvarCliente()">Salvar</button>
+      <button fxFlex="10" mat-raised-button color="warn" routerLink="/">Cancelar</button>
+    </div>
+  </div>
+</div>

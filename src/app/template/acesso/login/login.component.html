@@ -1,0 +1,22 @@
+<div [formGroup]="formulario" fxLayout="column" fxFlex="100">
+  <div fxLayout="row" fxFlex fxLayoutAlign="center center">
+    <div fxLayout="column" fxFlex="30">
+      <mat-form-field>
+        <input matInput placeholder="Login" formControlName="login">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="password" placeholder="Senha" formControlName="senha">
+      </mat-form-field>
+      <div [ngStyle]="{'color':'red'}"*ngIf="erro" fxLayoutAlign="center center">
+        {{erro}}
+      </div>
+      <div fxLayoutAlign="center center" fxLayoutGap="2%">
+        <button (click)="acessar()" fxFlex="35" mat-raised-button color="primary">Acessar</button>
+        <button fxFlex="35" mat-raised-button>Esqueci a Senha</button>
+      </div>
+      <div fxLayoutAlign="center center">
+        <a mat-button color="warn" routerLink="/cadastro">Ainda não sou cadastrado</a>
+      </div>
+    </div>
+  </div>
+</div>

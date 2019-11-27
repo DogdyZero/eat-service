@@ -1,0 +1,22 @@
+<div fxLayout="row wrap" fxLayoutGap="1%">
+  <mat-card *ngFor="let card of cards" fxFlex="31" >
+    <mat-card-header>
+      <mat-card-title>{{card.nome}}</mat-card-title>
+    </mat-card-header>
+    <div class="text-center mt-15px" fxLayoutAlign="center center">
+      <img mat-card-image src="{{card.imagem}}">
+    </div>
+    <mat-card-content>
+      <h2>
+        Valor:{{card.valor |currency:'BRL':'symbol':'0.2-2':'pt'}}
+      </h2>
+      <p>
+        {{card.descricao}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary"(click)="salvar(card.id)">Pedir</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+

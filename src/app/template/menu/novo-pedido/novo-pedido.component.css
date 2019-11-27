@@ -1,0 +1,9 @@
+img{
+    max-width: 100%;
+    width:350px;
+    height: 350px;
+    object-fit: cover;
+  }
+  .mt-15px{
+    margin-top:15px;
+  }

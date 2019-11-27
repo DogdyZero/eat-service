@@ -1,0 +1,25 @@
+<mat-card [formGroup]="formulario">
+    <mat-card-header>
+      <mat-card-title>Endereço</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div fxLayout="column" fxFlex="100">
+        <div fxLayout="row" fxLayoutAlign="center center">
+          <mat-form-field fxFlex="98">
+            <input matInput placeholder="Logradouro" formControlName="logradouro">
+          </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutGap="2%" fxLayoutAlign="center center">
+          <mat-form-field fxFlex="60">
+            <input matInput placeholder="Bairro" formControlName="bairro" >
+          </mat-form-field>
+          <mat-form-field fxFlex="28">
+            <input matInput placeholder="Cidade" formControlName="cidade">
+          </mat-form-field>
+          <mat-form-field fxFlex="6">
+            <input matInput placeholder="Estado" formControlName="estado">
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
